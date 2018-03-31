@@ -1,7 +1,7 @@
 <table>
   <th>Person Name</th>
   <tr>
-    <% @figures.each do |figure| %>
+    <%@figures.each do |figure|%>
       <td align="center"><a href="/figures/<%= figure.id %>"><%= figure.name %></a>
       <ul>
         <%figure.titles.each do |title|%>
@@ -9,7 +9,7 @@
         <%end%>
       </ul>
      </tr> </td>
-  <% end %>
+  <%end%>
 </table>
 <br>
 <a class="button" href="/">Go Home</a>
