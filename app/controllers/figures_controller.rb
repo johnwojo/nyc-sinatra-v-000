@@ -29,7 +29,7 @@ class FiguresController < ApplicationController
     end
 
     @figure.save
-    redirect to '/figures/#{@figure.id}'
+    redirect to "/figures/#{@figure.id}"
   end
 
 
@@ -41,11 +41,11 @@ class FiguresController < ApplicationController
       @figure.landmarks << Landmark.create(params[:landmark])
     end
 
-    if !params[:landmark][:name].empty?
+    if !params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
     end
 
     @figure.save
-    redirect to 'figures/#{@figure.id}'
+    redirect to "figures/#{@figure.id}"
   end
 end
